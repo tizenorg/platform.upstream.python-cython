@@ -3,7 +3,6 @@
 import os
 import re
 import codecs
-from xml.sax.saxutils import escape as html_escape
 from StringIO import StringIO
 
 import Version
@@ -149,8 +148,6 @@ function toggleDiv(id) {
                 code = code_source_file[k]
             except KeyError:
                 code = ''
-            else:
-                code = html_escape(code)
 
             calls = zero_calls.copy()
             code = _parse_code(annotate, code)
